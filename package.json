@@ -1,4 +1,5 @@
 {
+  "homepage": "https://HunterHo07.github.io/Website_4",
   "name": "data-finance-yt",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +15,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
