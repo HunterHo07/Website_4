@@ -1,22 +1,41 @@
-import React from 'react';
-import Analytics from './components/Analytics';
-import Cards from './components/Cards';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import Newsletter from './components/Newsletter';
+import CardSection from "./Components/CardSection";
+import Header from "./Components/Header";
+import {OuterLayout} from './styles/Layouts';
+import styled from 'styled-components';
+import ChartSection from "./Components/ChartSection";
+import MessagingSection from "./Components/MessagingSection";
+import PaymentSection from "./Components/PaymentSection";
+import FAQSection from "./Components/FAQSection";
+import questions from "./questions";
+import Footer from "./Components/Footer";
+import { Fade } from "react-reveal";
+
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <Analytics />
-      <Newsletter />
-      <Cards />
-      <Footer />
+    <div className="App">
+        <Header />
+          <MainStyled>
+              <CardSection />
+            <Fade right>
+              <ChartSection />
+            </Fade>
+            <Fade left>
+              <MessagingSection />
+            </Fade>
+            <Fade right>
+              <PaymentSection />
+            </Fade>
+              <FAQSection />
+          </MainStyled>
+          <Footer />
     </div>
   );
 }
+
+const MainStyled = styled.main`
+
+
+`;
 
 export default App;
